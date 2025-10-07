@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+    <div class="register_form">
+        <h2 id="h2_text">LOGIN</h2>
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="text" name="reg_username" id="reg_username" placeholder="enter your username" class="reg_username"> <br><br>
+            <input type="password" name="reg_password" id="reg_password" placeholder="enter your password" class="reg_password"> <br><br>
+            <input type="submit" name="register" id="reg_register" class="btn btn-primary" value="Login"> <br><br><br>
+            <p id="pid">Not registered? <a href="{% url 'register' %}">Sign Up Here</a></p>
+        </form>
+    </div>
+    {% endblock %}
+</body>
+</html>

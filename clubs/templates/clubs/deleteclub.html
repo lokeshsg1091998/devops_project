@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+    <div class="register_form">
+        <form action="" method="post">
+            {% csrf_token %}
+            <p class="delete_p">Do You Want to Delete <br> "{{club.name}}"?</p> <br><br>
+                <a href="{{request.META.HTTP_REFERER}}" class="delete_go_back">Go Back</a> <br> <br>
+                <input type="submit" name="" id="" value="Confirm" class="btn btn-danger">
+        </form>
+    </div>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,194 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background: #f1f3f9;
+}
+
+#main_div_0{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: green;
+    height: 75px;
+    width: 100%;
+}
+
+#nci
+{
+    font-size: 30px;
+    color: orange;
+    float: left;
+    text-decoration: none;
+    position: relative;
+    top: 10px;
+    left: 40px;
+}
+
+#main_div_0 .btn-primary
+{
+    color: white;
+    position: relative;
+    top: 16px;
+    left: 1100px;
+    text-decoration: none;
+    height: 35px;
+} 
+
+#main_div_0 .btn-danger
+{
+    color: white;
+    position: relative;
+    top: 16px;
+    left: 1175px;
+    text-decoration: none;
+    float: right;
+    height: 35px;
+
+}
+
+#index_div
+{
+    height: 200px;
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+#index_div p
+{
+    font-size: 20px;
+    position: relative;
+    top: 45px;
+}
+
+.main_img
+{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    top: 125px;
+    left: 260px;
+    border-radius: 10px;
+    box-shadow: 0 0 100px rgb(244, 242, 242);
+}
+
+#message_h4{
+    float: right;
+}
+
+/* register page */
+
+.register_form{
+    border: solid black 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 25px;
+    box-shadow: 0 0 100px rgb(166, 159, 159);
+    height: 360px;
+    width: 350px;
+    border-color: #fff;
+    border-radius: 16px;
+    position: relative;
+    top: 100px;
+    left: 600px;
+    align-items: center;
+}
+
+.register_form input
+{
+    position: relative;
+    top: 20px;
+}
+
+#reg_username,#reg_password,#reg_re_password{
+    height: 30px;
+    width: 220px;
+}
+
+.register_form #description,#reg_username,#h2_text,.btn-success,#reg_password,#reg_re_password,.btn-primary,#pid{
+    position: relative;
+    left: 50px;
+}
+
+.create_club_div{
+    height: 50px;
+    width: 100%;
+    float: left;
+}
+
+#create_club{
+    color: white;
+    position: relative;
+    top: 10px;
+    left: 1400px;
+}
+
+.clubs_div{
+    height: 180px;
+    width: 100%;
+    border: solid black 2px;
+    float: left;
+    box-shadow: 0 0 100px rgb(166, 159, 159);
+}
+
+#empty_div{
+    height: 15px;
+    width: 100%;
+    float: left;
+}
+
+.club_createdon{
+    float: right;
+}
+
+.join_leave{
+    position: relative;
+    top: 10px;
+    left: 100px;
+}
+
+.members_div{
+    height: 100%;
+    width: 100%;
+    border: solid 1px black;
+    float: left;
+}
+
+.club_messages,.members_div{
+    border: 2px solid black;
+    height: 100%;
+    width: 100%;
+    float: left;
+}
+
+.btn-dark
+{
+    position: relative;
+    left: 25px;
+    bottom: 28px;
+}
+
+.delete_go_back{
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 10px;
+    position: relative;
+    left: 120px;
+}
+
+.btn-danger {
+    position: relative;
+    left: 120px;
+}
+
+.delete_p {
+    position: relative;
+    left: 25px;
+    font-size: 18px;
+}

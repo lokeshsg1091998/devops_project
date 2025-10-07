@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="register_form">
+        <h2 id="h2_text">CREATE CLUB</h2>
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="text" name="reg_username" id="reg_username" placeholder="enter club name " required> <br><br> <br>
+            <textarea name="description" id="description" rows="5" cols="28" placeholder=" enter description for club" required></textarea> <br>
+            <input type="submit" name="submit" id="submit" class="btn btn-success" value="Create Club">
+        </form>
+    </div>
+</body>
+</html>
+{% endblock %}

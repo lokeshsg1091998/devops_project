@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+{% block content %}
+
+    <div class="create_club_div">
+
+        <a href="{% url 'createclub' %}"><button class="btn btn-warning" id="create_club">Create Club</button></a>
+    
+    </div>
+    
+        {% for club in clubs %}
+
+    <div class="clubs_div">
+            <span>Club Admin: @{{ club.host.username }}</span>
+            <span class="club_createdon">{{club.created_on|timesince}} ago</span>
+
+            <h2><a href="{% url 'club' club.id %}">{{club.name|upper}}</a></h2>
+            <p>Welcome Students! {{club.description|truncatechars:40}}....</p>
+            {% if request.user == club.host %}
+            <a href="{% url 'updateclub' club.id %}" class="btn btn-warning">edit here</a>
+            <a href="{% url 'deleteclub' club.id %}" class="btn btn-warning">delete here</a>
+            {% endif %}
+            <h6>{{club.members.all.count}} Joined</h6>
+    </div>
+
+    <div id="empty_div"></div>
+
+    {% endfor %}
+
+{% endblock %}
+
+</body>
+</html>

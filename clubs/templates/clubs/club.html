@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+        <div>
+            <form action="" method="post">
+                {% csrf_token %}
+                {% if user not in members %}
+                <input type="submit" value="Join" name="join" id="join" class="btn btn-primary join_leave">
+                {% else %}
+                <input type="submit" name="leave" id="leave" value="Leave" class="btn btn-danger join_leave">
+                {% endif %}
+            </form>
+
+            <a href="{% url 'home' %}"><button class="btn btn-dark">Back</button></a>
+
+            <p>{{clubs.description}}</p>
+
+        </div>
+
+        <div class="club_messages">
+            <h3>CONVERSATION!</h3>
+            <hr>
+
+            {% for message in all_messages %}
+            <small>@{{message.user}} {{message.created_on|timesince}} ago</small>
+            <p>{{message.body}}</p>
+            {% endfor %}
+            
+
+        <div class="club-comment-form">
+            {% if request.user.is_authenticated %}
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="text" name="comment" id="comment" placeholder="write your comments...">
+            </form>
+            {% endif %}
+        </div> <br>
+
+        </div>
+{% endblock %}
